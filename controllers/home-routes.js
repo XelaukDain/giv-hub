@@ -45,6 +45,15 @@ router.get('/features', async (req, res) => {
   }
 });
 
+router.get('/create', async (req, res) => {
+  try {
+    res.render('create', { loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // GET one gallery
 router.get('/section/:id', async (req, res) => {
   try {
