@@ -12,7 +12,7 @@ const createFormHandler = async (event) => {
     if (username && title && date && description && story && type && image) {
       const response = await fetch('/api/create', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, title, date, description, story, type, image}),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -23,6 +23,9 @@ const createFormHandler = async (event) => {
       }
     }
   };
+
+
+  
   
   document
     .querySelector('.create-form')
