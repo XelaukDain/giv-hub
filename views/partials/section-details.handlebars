@@ -1,0 +1,16 @@
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" src="/images/{{jobs.[0].filename}}" alt="{{jobs.[0].description}}">
+                  <div class="card-body">
+                    <p class="card-text fw-bold">{{jobs.[0].type_of_job}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="/section/{{id}}"type="button" class="btn btn-sm btn-warning">View</a>
+                        <button type="button" class="btn btn-sm btn-outline-warning">Create</button>
+                      </div>
+                      <small class="text-muted">{{format_date jobs.[0].start_date}}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
