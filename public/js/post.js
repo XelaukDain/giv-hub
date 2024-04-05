@@ -10,7 +10,7 @@ const createFormHandler = async (event) => {
     const image = document.querySelector('#image-create').value.trim();
   
     if (username && title && date && description && story && type && image) {
-      const response = await fetch('/api/create', {
+      const response = await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify({ username, title, date, description, story, type, image}),
         headers: { 'Content-Type': 'application/json' },
@@ -19,7 +19,7 @@ const createFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/section/' + type);
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to post listing');
       }
     }
   };

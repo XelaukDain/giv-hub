@@ -1,8 +1,8 @@
 const User = require('./User');
 const Section = require('./Section');
-const Job = require('./Job');
+const Post = require('./Post');
 
-Section.hasMany(Job, {
+Section.hasMany(Post, {
   foreignKey: 'section_id',
 });
 
@@ -10,4 +10,4 @@ Job.belongsTo(Section, {
   foreignKey: 'section_id',
 });
 
-module.exports = { User, Section, Job };
+module.exports = { User, Section, Post };
