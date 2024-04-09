@@ -11,7 +11,7 @@ const postData = [
     filename: '01-blossoming-apricot.jpg',
     description:
       'Branches with pink apricot blossoms against a blue background.',
-    category: 'Waste line Work',
+    category: 'Clothing',
   },
   {
     title: 'Venting issue',
@@ -20,7 +20,7 @@ const postData = [
     section_id: 1,
     filename: '02-cosmos-flowers.jpg',
     description: 'Pink cosmos flowers against a blue sky.',
-    category: 'Waste line Work',
+    category: 'Clothing',
   },
   {
     title: 'Pex b vs Pex a',
@@ -29,7 +29,7 @@ const postData = [
     section_id: 2,
     filename: '03-sand-sea-summer.jpg',
     description: 'Sandy beach with the blue sea and sky in the background.',
-    category: 'Water Line Work',
+    category: 'Shoes',
   },
   {
     title: 'Proflex copper hybrid cutter',
@@ -38,7 +38,7 @@ const postData = [
     section_id: 3,
     filename: '04-beach-chairs.jpg',
     description: 'Two beach chairs under a beach umbrella on the beach.',
-    category: 'Gas Line Work',
+    category: 'Accessories',
   },
   {
     title: 'Water Heater Thermocouple fix',
@@ -47,7 +47,7 @@ const postData = [
     section_id: 4,
     filename: '05-beach-sunrise.jpg',
     description: 'Sun setting in the horizon with waves lapping the shore.',
-    category: 'Applicance repair',
+    category: 'Home Goods',
   },
   {
     title: 'Water Heater Installation',
@@ -57,7 +57,7 @@ const postData = [
     filename: '06-fall-colors.jpg',
     description:
       'Trees with red, orange, yellow leaves reflected on a still lake.',
-    category: 'Applicance Installation',
+    category: 'Electronics',
   },
   {
     title: 'New Constuction vs Service plumbing',
@@ -68,7 +68,7 @@ const postData = [
     //post body content
     description:
       'Mountains with red and yellow leaves against a background of hazy rolling hills.',
-    category: 'Miscellaneous',
+    category: 'Books & Media',
   },
 ];
 
