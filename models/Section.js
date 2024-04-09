@@ -21,11 +21,11 @@ Section.init(
     },
     filename: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     type: {
       type: DataTypes.STRING,
