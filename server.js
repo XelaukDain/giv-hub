@@ -35,6 +35,7 @@ const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+/* Handlebars.registerPartial('header', '{{header}}'); */
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
