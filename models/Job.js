@@ -11,14 +11,17 @@ Job.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    // product_name
     title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // brand
     technician: {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    // listing_date
     start_date: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -27,10 +30,12 @@ Job.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    // img
     filename: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // product description
     description: {
       type: DataTypes.STRING,
       allowNull: false,
