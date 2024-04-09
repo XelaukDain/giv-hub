@@ -1,0 +1,19 @@
+{
+  "!-- User Profile --": "",
+  "!-- Interests/Looking For --": "",
+  "!-- Location / Contact --": "",
+  "!-- Active / Pending --": "",
+  "!-- Reviews / Comments --": "",
+  "!-- User picture goes here --": "",
+  "user": {
+    "avatar": "",
+    "name": "Aragorn",
+    "username": "Aragorn",
+    "email": "aragorn@example.org",
+    "phone": "",
+    "location": "",
+    "offers": ""
+  },
+  "else": "",
+  "!-- Username and contact information --": "Rey"
+}

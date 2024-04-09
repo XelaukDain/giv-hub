@@ -1,0 +1,27 @@
+{{#if loggedIn}}
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark col-md-12 col-12">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><i class="fas fa-drumstick-bite"></i> Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="/user/profile"> Profile</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="/user/offer"> Offer</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="/wishlist"> Wishlist</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="/user/logout"> Logout</a></li>
+          </ul>
+        </li>
+  </div>
+</nav>
+
+{{else}}
+<div class="container-fluid">
+    <a class="navbar-brand" href="/login"> Login/Signup</a>
+</div>
+{{/if}}
