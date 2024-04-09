@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Section, Job } = require('../models');
+const { Section, Post } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
     const dbSectionData = await Section.findAll({
       include: [
         {
-          model: Job,
-          attributes: ['filename', 'description', 'type_of_job', 'start_date'],
+          model: Post,
+          attributes: ['filename', 'description', 'category', 'start_date'],
         },
       ],
     });
