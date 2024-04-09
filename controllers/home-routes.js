@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Section, Job } = require('../models');
+const { Section, Post } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
     const dbSectionData = await Section.findAll({
       include: [
         {
-          model: Job,
-          attributes: ['filename', 'description', 'type_of_job', 'start_date'],
+          model: Post,
+          attributes: ['filename', 'description', 'category', 'start_date'],
         },
       ],
     });
@@ -76,7 +76,7 @@ router.get('/section/:id', async (req, res) => {
     const dbSectionData = await Section.findByPk(req.params.id, {
       include: [
         {
-          model: Job,
+          model: Post,
           attributes: [
             'id',
             'title',
@@ -104,7 +104,7 @@ router.get('/job/:id', async (req, res) => {
     const dbSectionData = await Section.findByPk(req.params.id, {
       include: [
         {
-          model: Job,
+          model: Post,
           attributes: [
             'id',
             'title',
@@ -120,11 +120,11 @@ router.get('/job/:id', async (req, res) => {
     });
 
     const section = dbSectionData.get({ plain: true });
-    const dbJobData = await Job.findByPk(req.params.id);
+    const dbPostData = await Post.findByPk(req.params.id);
 
-    const job = dbJobData.get({ plain: true });
+    const post = dbPostData.get({ plain: true });
     //Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('job', { job, section, loggedIn: req.session.loggedIn });
+    res.render('post', { post, section, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
