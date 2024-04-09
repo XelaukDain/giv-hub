@@ -1,13 +1,13 @@
 {
-  "jobs": {
+  "posts": {
     "[0]": {
       "filename": "Mary",
       "description": "",
-      "type_of_job": ""
+      "category": ""
     }
   },
   "id": 10,
-  "format_date jobs": {
+  "format_date posts": {
     "[0]": {
       "start_date": ""
     }
