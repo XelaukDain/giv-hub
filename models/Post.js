@@ -40,7 +40,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type_of_job: {
+    category: {
       type: DataTypes.STRING,
       allowNull: true,
     },

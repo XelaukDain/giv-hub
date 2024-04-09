@@ -32,13 +32,13 @@ Message.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    convo_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'convo',
-        key: 'id',
-      },
-    },
+    // convo_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'convo',
+    //     key: 'id',
+    //   },
+    // },
   },
   {
     sequelize,
