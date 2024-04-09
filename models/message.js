@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Section extends Model {}
+class Message extends Model {}
 
-Section.init(
+Message.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,37 +11,41 @@ Section.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    sender: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    starting_date: {
+    recipient: {
+        
+        type: DataTypes.STRING,
+        allowNull: false,
+        },
+    date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
     filename: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    type: {
-      type: DataTypes.STRING,
       allowNull: true,
     },
-    entries: {
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    convo_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      references: {
+        model: 'convo',
+        key: 'id',
+      },
     },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'section',
+    modelName: 'message',
   }
 );
 
-module.exports = Section;
+module.exports = Message;

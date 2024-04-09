@@ -36,6 +36,22 @@ router.get('/pricing', async (req, res) => {
   }
 });
 
+// user profile GET
+
+
+
+router.get('/profile', async (req, res) => {
+  try {
+    res.render('profile', { loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
+
 router.get('/features', async (req, res) => {
   try {
     res.render('features', { loggedIn: req.session.loggedIn });

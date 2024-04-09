@@ -3,14 +3,14 @@
     <main>
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="/images/logo.png" alt="" width="72" height="57">
-            <h2>Create Post</h2>
-            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form
-                group has a validation state that can be triggered by attempting to submit the form without completing
-                it.</p>
+            <h2>Giv Item</h2>
+            <p class="lead">Please fill out the form below to offer donating items to users willing to pick up.
+                You can use your own home address or offer to donate at an alternate location.
+            </p>
         </div>
                            <hr class="my-4">
         <div class="col-md-7 col-lg-8">
-            <h4 class="mb-3">Text Content</h4>
+            <h4 class="mb-3">Donation info:</h4>
             <form class="needs-validation" novalidate="">
                 <div class="row g-3">
                     <fieldset disabled>
@@ -25,41 +25,28 @@
                     </fieldset>
 
                     <div class="col-12">
-                        <label for="email" class="form-label">Title</label>
-                        <input type="email" class="form-control" id="email" placeholder="Title">
+                        <label for="email" class="form-label">Item:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Item name...">
                         <div class="invalid-feedback">
-                            Title is required
+                            Item name is required.
                         </div>
                     </div>
 
                     <div class="col-12">
-                        <label for="address" class="form-label">Description</label>
+                        <label for="address" class="form-label">Description:</label>
                         <textarea type="text" class="form-control" id="address" placeholder="Short Description..."
-                            required="" rows="3"></textarea>
+                            required="" rows="6"></textarea>
                         <div class="invalid-feedback">
-                            Please enter a short description
+                            Please enter a short description.
                         </div>
                     </div>
 
                     <div class="col-12">
-                        <label for="address2" class="form-label">Explaination/invoice summary <span
-                                class="text-muted">(Optional)</span></label>
+                        <label for="address2" class="form-label">Pickup location:</label>
                         <textarea type="text" class="form-control" id="address2" placeholder="Long Description..."
-                            rows="6"></textarea>
-                    </div>
-
-                    <div class="col-md-5">
-                        <label for="country" class="form-label">Type of Work</label>
-                        <select class="form-select" id="country" required="">
-                            <option value="">Choose...</option>
-                            <option>Water</option>
-                            <option>Sewer</option>
-                            <option>Gas</option>
-                            <option>Appliance repair </option>
-                            <option>Appliance Install</option>
-                        </select>
+                            rows="3"></textarea>
                         <div class="invalid-feedback">
-                            Please select a valid field.
+                            Please enter a valid location.
                         </div>
                     </div>
 
@@ -67,13 +54,13 @@
                     {{!-- photo upload stuff --}}
                     <h4 class="mb-3">Photo Upload</h4>
                     <div class="mb-3">
-                        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                        <label for="formFileMultiple" class="form-label">Please upload an image of the item:</label>
                         <input class="form-control" type="file" id="formFileMultiple" multiple>
                     </div>
                     
                     <hr class="my-4">
 
-                    <button class="w-100 btn btn-warning btn-lg" type="submit">Create Post</button>
+                    <button class="w-100 btn btn-warning btn-lg" type="submit">Post Donation</button>
             </form>
         </div>
 </div>
