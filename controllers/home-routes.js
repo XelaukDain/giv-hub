@@ -99,7 +99,7 @@ router.get('/section/:id', async (req, res) => {
 });
 
 // GET one painting
-router.get('/job/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const dbSectionData = await Section.findByPk(req.params.id, {
       include: [
