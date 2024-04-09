@@ -1,8 +1,29 @@
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark col-md-12 col-12">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fas fa-drumstick-bite"></i> Navbar</a>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"></a>
+      <button class="btn-btnsecondary-dropdown-toggle" type="button" id="navbarDropdown"
+      data-bs-toggle="dropdown">
+        Nav
+      </button>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="/user/profile">Profile</a></li>
+      <li><a class="dropdown-item" href="/user/offer">Offer</a>
+      <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
+      <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
+{{!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark col-md-12 col-12">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"> Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,10 +39,10 @@
           </ul>
         </li>
   </div>
-</nav>
+</nav> --}}
 
-{{else}}
+{{!-- {{else}}
 <div class="container-fluid">
     <a class="navbar-brand" href="/login"> Login/Signup</a>
 </div>
-{{/if}}
+{{/if}} --}}
