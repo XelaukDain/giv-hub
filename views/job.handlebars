@@ -8,7 +8,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/images/{{job.filename}}" class="d-block w-100" alt="...">
+      <img src="/images/{{post.filename}}" class="d-block w-100" alt="...">
     </div>
     {{!-- <div class="carousel-item">
       <img src="..." class="d-block w-100" alt="...">
@@ -30,21 +30,21 @@
     <div class="col-md-8">
 
       <article class="blog-post">
-        <h2 class="blog-post-title">{{job.title}}</h2>
-        <p class="blog-post-meta">On {{format_date job.start_date}} by <a href="#">{{job.technician}}</a></p>
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">On {{format_date post.start_date}} by <a href="#">{{post.technician}}</a></p>
 
-        <p>{{job.description}}</p>
+        <p>{{post.description}}</p>
         <hr>
-        <p>{{job.story}}</p>
+        <p>{{post.story}}</p>
         <ul>
-          {{#each job.part as |part|}}
+          {{#each post.part as |part|}}
             {{> part-details}}
           {{/each}}
           {{!-- <li>First list item</li>
           <li>Second list item with a longer description</li>
           <li>Third list item to close it out</li> --}}
         </ul>
-        <p>{{job.notes}}</p>
+        <p>{{post.notes}}</p>
       </article>
 {{!-- 
       <nav class="blog-pagination" aria-label="Pagination">
@@ -64,8 +64,8 @@
         <div class="p-4">
           <h4 class="fst-italic">Archives</h4>
           <ol class="list-unstyled mb-0">
-            {{#each section.jobs as |job|}}
-              <li><a href="/job/{{id}}">{{job.title}}</a></li>
+            {{#each section.posts as |post|}}
+              <li><a href="/post/{{id}}">{{post.title}}</a></li>
             {{/each}}
           </ol>
         </div>

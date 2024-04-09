@@ -24,8 +24,8 @@
         </div>
       </div>
     </div>
-    {{#each section.jobs as |job|}}
-    {{> job-details}}
+    {{#each section.posts as |post|}}
+    {{> post-details}}
     {{/each}}
 
   </div>
@@ -43,8 +43,8 @@
   <!-- START THE FEATURETTES -->
 
   <hr class="featurette-divider">
-  {{#each section.jobs as |job|}}
-  {{> job-featurette}}
+  {{#each section.posts as |post|}}
+  {{> post-featurette}}
   {{/each}}
 
 
