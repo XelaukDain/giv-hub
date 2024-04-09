@@ -70,7 +70,7 @@ router.get('/create', async (req, res) => {
   }
 });
 
-// GET one gallery
+// GET one section
 router.get('/section/:id', async (req, res) => {
   try {
     const dbSectionData = await Section.findByPk(req.params.id, {
@@ -113,7 +113,7 @@ router.get('/job/:id', async (req, res) => {
             'filename',
             'description',
             //addtions
-            'type_of_job',
+            'category',
           ],
         },
       ],
