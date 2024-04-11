@@ -11,7 +11,7 @@ const postData = [
     filename: './Shoes/vans-checkered.jpg',
     description:
       'Slip on Checkerboard Vans',
-    type_of_job: 'Waste line Work',
+    category: 'Shoes',
   },
   {
     product_name: 'Boots',
@@ -20,7 +20,7 @@ const postData = [
     section_id: 2,
     filename: './Shoes/demtimbs.jpg',
     description: 'Timberland Boots',
-    type_of_job: 'Waste line Work',
+    category: 'Shoes',
   },
   {
     product_name: 'Grey Shirt',
@@ -29,7 +29,7 @@ const postData = [
     section_id: 1,
     filename: './Clothing/lacosteshirt.jpg',
     description: 'Pink cosmos flowers against a blue sky.',
-    category: 'Waste line Work',
+    category: 'Clothing',
   },
   {
     product_name: 'Snaking collapse',
