@@ -216,3 +216,17 @@ nav a:hover::before {
   min-height: 60vh;
   position: relative;
 }
+
+.bg-image2 {
+  background-image:url(../images/background-image-2.jpg);
+  background-size: cover;
+  min-height: 60vh;
+  position: relative;
+}
+
+.bg-image3 {
+  background-image:url(../images/background-image-3.jpg);
+  background-size: cover;
+  min-height: 60vh;
+  position: relative;
+}
