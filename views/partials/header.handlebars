@@ -2,11 +2,12 @@
 <header>
   <div class="container">
     <!-- Github logo goes here -->
-    <a href="/" class="logo"><img class="bi me-2" width="60" height="52" 
+    <a href="/" class="logo rounded-circle"><img class="bi me-2" width="60" height="52" 
     role="img" src="/images/website/givhub_logo.png" alt="givhub logo"></a>
     <!-- links change depending if logged in / logged out -->
     <nav>
       <ul>
+        <li><a href="/">Home</a></li>
         {{#if loggedIn}}
         <li><a href="/profile">Profile</a></li>
         <li><a href="/create">Offer</a></li>
