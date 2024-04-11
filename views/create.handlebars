@@ -33,6 +33,8 @@
                         </div>
                     </div>
 
+
+
                     <div class="col-12">
                         <label for="address" class="form-label">Description:</label>
                         <textarea type="text" class="form-control" id="address" placeholder="Short Description..."
@@ -48,6 +50,28 @@
                             rows="3"></textarea>
                         <div class="invalid-feedback">
                             Please enter a valid location.
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+
+                    <div class="row">
+
+                        <div class="col-md-5 mb-3">
+                            <label for="type">Category</label>
+                            <select class="custom-select d-block w-100" id="type" required="">
+                                <option value="">Choose...</option>
+                                <option>Clothing</option>
+                                <option>Shoes</option>
+                                <option>Accessories</option>
+                                <option>Home Goods</option>
+                                <option>Electronics</option>
+                                <option>Books or Media</option>
+
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid category.
+                            </div>
                         </div>
                     </div>
 
