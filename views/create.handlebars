@@ -12,22 +12,22 @@
         <hr class="my-4">
         <div class="col-md-7 col-lg-8">
             <h4 class="mb-3">Donation info:</h4>
-            <form class="needs-validation" novalidate="">
+            <form class="create-form" novalidate="">
                 <div class="row g-3">
                     <fieldset disabled>
                         <div class="col-12">
-                            <label for="username" class="form-label">Username</label>
+                            <label for="username-create" class="form-label">Username</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" id="username" placeholder="Username"
+                                <input type="text" class="form-control" id="username-create" value="{{user.username}}" placeholder="{{user.username}}"
                                     required="">
                             </div>
                         </div>
                     </fieldset>
 
                     <div class="col-12">
-                        <label for="email" class="form-label">Item:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Item name...">
+                        <label for="title-create" class="form-label">Item:</label>
+                        <input type="title" class="form-control" id="title-create" placeholder="Item name...">
                         <div class="invalid-feedback">
                             Item name is required.
                         </div>
@@ -36,8 +36,8 @@
 
 
                     <div class="col-12">
-                        <label for="address" class="form-label">Description:</label>
-                        <textarea type="text" class="form-control" id="address" placeholder="Short Description..."
+                        <label for="description-create" class="form-label">Description:</label>
+                        <textarea type="text" class="form-control" id="description-create" placeholder="Short Description..."
                             required="" rows="6"></textarea>
                         <div class="invalid-feedback">
                             Please enter a short description.
@@ -45,8 +45,8 @@
                     </div>
 
                     <div class="col-12">
-                        <label for="address2" class="form-label">Pickup location:</label>
-                        <textarea type="text" class="form-control" id="address2" placeholder="Long Description..."
+                        <label for="location-create" class="form-label">Pickup location:</label>
+                        <textarea type="text" class="form-control" id="location-create" placeholder="Address..."
                             rows="3"></textarea>
                         <div class="invalid-feedback">
                             Please enter a valid location.
@@ -58,8 +58,8 @@
                     <div class="row">
 
                         <div class="col-md-5 mb-3">
-                            <label for="type">Category</label>
-                            <select class="custom-select d-block w-100" id="type" required="">
+                            <label for="type-create">Category</label>
+                            <select class="custom-select d-block w-100" id="type-create" required="">
                                 <option value="">Choose...</option>
                                 <option>Clothing</option>
                                 <option>Shoes</option>
@@ -79,8 +79,8 @@
                     {{!-- photo upload stuff --}}
                     <h4 class="mb-3">Photo Upload</h4>
                     <div class="mb-3">
-                        <label for="formFileMultiple" class="form-label">Please upload an image of the item:</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        <label for="image-create" class="form-label">Please upload an image of the item:</label>
+                        <input class="form-control" type="file" id="image-create" multiple>
                     </div>
 
                     <hr class="my-4">

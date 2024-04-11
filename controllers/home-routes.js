@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Section, Post } = require('../models');
+const { Section, Post, User } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
@@ -59,7 +59,12 @@ router.get('/features', async (req, res) => {
 
 router.get('/create', async (req, res) => {
   try {
-    res.render('create', { loggedIn: req.session.loggedIn });
+    const dbUserData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+    
+    const user = dbUserData.get({ plain: true });
+    res.render('create', {user, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -97,7 +102,12 @@ router.get('/section/:id', async (req, res) => {
 //Get user profile
 router.get('/profile', async (req, res) => {
   try {
-    res.render('user/profile', { loggedIn: req.session.loggedIn });
+    const dbUserData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+    
+    const user = dbUserData.get({ plain: true });
+    res.render('user/profile', {user, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
