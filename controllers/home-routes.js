@@ -13,6 +13,13 @@ router.get('/', async (req, res) => {
         },
       ],
     });
+    
+    // // NOTE: THIS IS ONLY FOR TESTING PURPOSES {
+    // req.session.save(() => {
+    //   // Set the 'loggedIn' session variable to 'true'
+    //   req.session.loggedIn = true;
+    // });
+    // // }
 
     const sections = dbSectionData.map((section) =>
       section.get({ plain: true })
@@ -139,7 +146,7 @@ router.get('/login', (req, res) => {
     return;
   }
   // Otherwise, render the 'login' template
-  res.render('login');
+  res.render('user/login');
 });
 
 module.exports = router;

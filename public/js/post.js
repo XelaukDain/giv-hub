@@ -2,17 +2,16 @@ const createFormHandler = async (event) => {
   event.preventDefault();
 
   const username = document.querySelector('#username-create').value.trim();
-  const title = document.querySelector('#email-create').value.trim();
-  const date = document.querySelector('#password-create').value.trim();
+  const title = document.querySelector('#title-create').value.trim();
   const description = document.querySelector('#description-create').value.trim();
-  const story = document.querySelector('#story-create').value.trim();
   const type = document.querySelector('#type-create').value.trim();
-  const image = document.querySelector('#image-create').value.trim();
+  const location = document.querySelector('#location-create').value.trim();
+  // const image = document.querySelector('#image-create').value.trim();
 
-  if (username && title && date && description && story && type && image) {
+  if (username && title && description && location && type) {
     const response = await fetch('/api/post', {
       method: 'POST',
-      body: JSON.stringify({ username, title, date, description, story, type, image}),
+      body: JSON.stringify({ username, title, description, type}),
       headers: { 'Content-Type': 'application/json' },
     });
 
