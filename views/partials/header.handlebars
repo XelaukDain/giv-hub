@@ -1,27 +1,21 @@
-{{#if loggedIn}}
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark col-md-12 col-12">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fas fa-drumstick-bite"></i> Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <li><a class="dropdown-item" href="/user/profile"> Profile</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="/user/offer"> Offer</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="/wishlist"> Wishlist</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="/user/logout"> Logout</a></li>
-          </ul>
-        </li>
+<!-- Header navbar -->
+<header>
+  <div class="container">
+    <!-- Github logo goes here -->
+    <h1 class="logo"><img class="bi me-2" width="60" height="52" role="img" src="../../public/images/givhub_logo.png" alt="givhub logo"></h1>
+    <!-- links change depending if logged in / logged out -->
+    <nav>
+      <ul>
+        {{#if loggedIn}}
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/offer">Offer</a></li>
+        {{!-- Wishlist Under Construction --}}
+        {{!-- <li><a href="/user/wishlist">Wishlist</a></li> --}}
+        <li><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Log in / sign up</a></li>
+        {{/if}}
+      </ul>
+    </nav>
   </div>
-</nav>
-
-{{else}}
-<div class="container-fluid">
-    <a class="navbar-brand" href="/login"> Login/Signup</a>
-</div>
-{{/if}}
+</header>

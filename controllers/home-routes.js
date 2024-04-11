@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['filename', 'description', 'category', 'start_date'],
+          attributes: ['filename', 'description', 'category', 'listing_date'],
         },
       ],
     });
@@ -86,9 +86,9 @@ router.get('/section/:id', async (req, res) => {
           model: Post,
           attributes: [
             'id',
-            'title',
-            'technician',
-            'start_date',
+            'product_name',
+            'brand',
+            'listing_date',
             'filename',
             'description',
           ],
@@ -114,9 +114,9 @@ router.get('/post/:id', async (req, res) => {
           model: Post,
           attributes: [
             'id',
-            'title',
-            'technician',
-            'start_date',
+            'product_name',
+            'brand',
+            'listing_date',
             'filename',
             'description',
             //addtions

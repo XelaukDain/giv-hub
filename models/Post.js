@@ -12,17 +12,17 @@ Post.init(
       autoIncrement: true,
     },
     // product_name
-    title: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     // brand
-    technician: {
+    brand: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     // listing_date
-    start_date: {
+    listing_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
