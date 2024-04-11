@@ -7,10 +7,11 @@
     <nav>
       <ul>
         {{#if loggedIn}}
-        <li><a href="/user/profile">Profile</a></li>
-        <li><a href="/user/offer">Offer</a></li>
-        <li><a href="/user/wishlist">Wishlist</a></li>
-        <li><a href="/user/logout">Logout</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/offer">Offer</a></li>
+        {{!-- Wishlist Under Construction --}}
+        {{!-- <li><a href="/user/wishlist">Wishlist</a></li> --}}
+        <li><a href="/logout">Logout</a></li>
         {{else}}
         <li><a href="/login">Log in / sign up</a></li>
         {{/if}}
