@@ -36,7 +36,7 @@ const postData = [
     brand: 'LedyX',
     listing_date: 'March 30, 2018',
     section_id: 1,
-    filename: './Clothing/lacosteshirt.jpg',
+    filename: './Clothing/greendress.jpg',
     description:
       'Worn once for wedding, super pretty color size M',
     category: 'Clothing',
