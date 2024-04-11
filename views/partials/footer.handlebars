@@ -7,6 +7,13 @@
         <!--Footer columns-->
         <div class="col-md-2">
           <h6 class="text-uppercase font-weight-bold">
+            <a href="/">Home</a>
+          </h6>
+        </div>
+        {{!-- nav bar on footer if logged in --}}
+        {{#if loggedIn}}
+        <div class="col-md-2">
+          <h6 class="text-uppercase font-weight-bold">
             <a href="/profile">Profile</a>
           </h6>
         </div>
@@ -26,6 +33,8 @@
             <a href="/logout">Logout</a>
           </h6>
         </div>
+        {{else}}
+        {{/if}}
       </div>
     </section>
     <hr />
