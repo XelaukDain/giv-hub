@@ -6,9 +6,9 @@ const createFormHandler = async (event) => {
   const description = document.querySelector('#description-create').value.trim();
   const type = document.querySelector('#type-create').value.trim();
   const location = document.querySelector('#location-create').value.trim();
-  // const image = document.querySelector('#image-create').value.trim();
+  const image = document.querySelector('#image-create');
 
-  if (username && title && description && location && type) {
+  if (username && title && description && location && type && image) {
     const response = await fetch('/api/post', {
       method: 'POST',
       body: JSON.stringify({ username, title, description, type}),
@@ -23,6 +23,11 @@ const createFormHandler = async (event) => {
   }
 };
 
+// Don't forget the enctype="multipart/form-data" in your form.
+
+// <form action="/profile" method="post" enctype="multipart/form-data">
+//   <input type="file" name="avatar" />
+// </form>
 
 
 

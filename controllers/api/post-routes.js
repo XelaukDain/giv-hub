@@ -1,9 +1,26 @@
 const router = require("express").Router();
 const { Post } = require("../../models");
+const multer = require("multer");
+
+// Create a storage engine for multer
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images/" + type); // Specify the directory where you want to store the uploaded images
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname); // Generate a unique filename for the uploaded image
+  },
+});
+
+// Create an instance of multer with the storage engine
+const upload = multer({ storage: storage });
 
 // CREATE new user
-router.post("/post", async (req, res) => {
+router.post("/post", upload.array("image"), async (req, res) => {
   try {
+    // Get the path of the uploaded image
+    const imagePath = req.file.path;
+
     const dbUserData = await Post.create({
       username: req.body.username,
       title: req.body.title,
@@ -11,7 +28,7 @@ router.post("/post", async (req, res) => {
       description: req.body.description,
       story: req.body.story,
       type: req.body.type,
-      image: req.body.image,
+      image: imagePath,
     });
 
     // Set up sessions with the 'loggedIn' variable
