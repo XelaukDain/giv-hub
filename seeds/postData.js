@@ -4,6 +4,34 @@ const { Post } = require('../models');
 
 const postData = [
   {
+    title: 'Shoes',
+    technician: 'Vans',
+    start_date: 'March 30, 2018',
+    section_id: 2,
+    filename: './Shoes/vans-checkered.jpg',
+    description:
+      'Slip on Checkerboard Vans',
+    type_of_job: 'Waste line Work',
+  },
+  {
+    title: 'Boots',
+    technician: 'Timberland',
+    start_date: 'May 05, 2017',
+    section_id: 2,
+    filename: './Shoes/demtimbs.jpg',
+    description: 'Timberland Boots',
+    type_of_job: 'Waste line Work',
+  },
+  {
+    title: 'Grey Shirt',
+    technician: 'Lacoste',
+    start_date: 'May 05, 2017',
+    section_id: 1,
+    filename: './Clothing/lacosteshirt.jpg',
+    description: 'Pink cosmos flowers against a blue sky.',
+    category: 'Waste line Work',
+  },
+  {
     title: 'Snaking collapse',
     technician: 'LedyX',
     start_date: 'March 30, 2018',
