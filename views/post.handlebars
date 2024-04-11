@@ -1,11 +1,10 @@
-
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <div id="carouselExampleIndicators" class="carousel slide p-3" data-bs-ride="carousel">
-  <div class="carousel-indicators">
+  {{!-- <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+  </div> --}}
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/images/{{post.filename}}" class="d-block w-100" alt="...">
@@ -17,14 +16,14 @@
       <img src="..." class="d-block w-100" alt="...">
     </div> --}}
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  {{!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
+  </button> --}}
 </div>
 <div class="row g-5 p-3">
     <div class="col-md-8">
@@ -58,11 +57,11 @@
       <div class="position-sticky" style="top: 2rem;">
         <div class="p-4 mb-3 bg-light rounded">
           <h4 class="fst-italic">About</h4>
-          <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+          <p class="mb-0">[description goes here]</p>
         </div>
 
         <div class="p-4">
-          <h4 class="fst-italic">Archives</h4>
+          <h4 class="fst-italic">Offering Contact</h4>
           <ol class="list-unstyled mb-0">
             {{#each section.posts as |post|}}
               <li><a href="/post/{{id}}">{{post.title}}</a></li>
@@ -70,32 +69,21 @@
           </ol>
         </div>
 
-        <div class="p-4">
-          <h4 class="fst-italic">Elsewhere</h4>
-          <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ol>
-        </div>
       </div>
     </div>
   </div> 
-{{else}}
+{{!-- {{else}}
     <div class="b-example-divider"></div>
     <div class="container my-5">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
           <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
             <h1 class="display-4 fw-bold lh-1">Login or Signup to view content</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <p class="lead">In order to use the application features you must make a account.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
               <a href="/login" type="button" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Sign Up</a>
               <a href="/" type="button" class="btn btn-outline-secondary btn-lg px-4">Return</a>
             </div>
           </div>
-          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-              <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
-          </div>
         </div>
       </div>
-{{/if}}
+{{/if}} --}}
