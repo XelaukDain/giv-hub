@@ -43,18 +43,7 @@ router.get('/pricing', async (req, res) => {
   }
 });
 
-// user profile GET
 
-
-
-router.get('/profile', async (req, res) => {
-  try {
-    res.render('profile', { loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 
 
@@ -99,6 +88,16 @@ router.get('/section/:id', async (req, res) => {
     const section = dbSectionData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'section' template
     res.render('section', { section, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//Get user profile
+router.get('/profile', async (req, res) => {
+  try {
+    res.render('user/profile', { loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

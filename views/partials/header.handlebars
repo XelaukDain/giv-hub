@@ -2,16 +2,16 @@
 <header>
   <div class="container">
     <!-- Github logo goes here -->
-    <h1 class="logo"><img class="bi me-2" width="60" height="52" role="img" src="../../public/images/givhub_logo.png" alt="givhub logo"></h1>
+    <a href="/" class="logo"><img class="bi me-2" width="60" height="52" role="img" src="/images/givhub_logo.png" alt="givhub logo"></a>
     <!-- links change depending if logged in / logged out -->
     <nav>
       <ul>
         {{#if loggedIn}}
         <li><a href="/profile">Profile</a></li>
-        <li><a href="/offer">Offer</a></li>
+        <li><a href="/create">Offer</a></li>
         {{!-- Wishlist Under Construction --}}
         {{!-- <li><a href="/user/wishlist">Wishlist</a></li> --}}
-        <li><a href="/logout">Logout</a></li>
+        <li id="logout"><a href="/">Logout</a></li>
         {{else}}
         <li><a href="/login">Log in / sign up</a></li>
         {{/if}}
